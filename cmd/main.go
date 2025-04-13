@@ -7,8 +7,9 @@ import (
 )
 
 func main() {
-	time.Sleep(3 * time.Second)
+	time.Sleep(6 * time.Second)
 	config := sarama.NewConfig()
+
 	admin, err := sarama.NewClusterAdmin([]string{"kafka:9092"}, config)
 	if err != nil {
 		log.Fatal("Failed to create admin:", err)

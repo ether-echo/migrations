@@ -33,4 +33,4 @@ services:
 
 networks:
   infra_net:
-    driver: bridge
+    external: true
