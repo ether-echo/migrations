@@ -17,9 +17,20 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_CREATE_TOPICS: my-topic:1:1,another-topic:2:1
     networks:
       - infra_net
 
+  kafka-topics:
+    build:
+      context: ./  # путь к папке с Dockerfile
+    container_name: kafka-topics
+    networks:
+      - infra_net
+    depends_on:
+      - kafka
+      - zookeeper
+
 networks:
   infra_net:
-    external: true
+    driver: bridge
