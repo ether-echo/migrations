@@ -20,7 +20,19 @@ services:
       KAFKA_CREATE_TOPICS: my-topic:1:1,another-topic:2:1
     networks:
       - infra_net
-
+  db:
+    image: postgres:12
+    container_name: db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: 123
+      POSTGRES_DB: postgres
+      POSTGRES_USER: postgres
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    networks:
+      - infra_net
   kafka-topics:
     build:
       context: ./  # путь к папке с Dockerfile
@@ -30,7 +42,10 @@ services:
     depends_on:
       - kafka
       - zookeeper
-
+      - db
 networks:
   infra_net:
     external: true
+
+volumes:
+  db-data:
