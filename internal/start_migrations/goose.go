@@ -18,12 +18,12 @@ func OpenDB(cnf *config.Config) {
 
 	db, err := sql.Open(cnf.DBName, fmt.Sprintf("user=%s password=%s dbname=%s host=%s sslmode=disable", cnf.DBUser, cnf.DBPassword, cnf.DBName, cnf.DBHost))
 	if err != nil {
-		log.Fatalf("Не удалось подключиться к базе данных: %v", err)
+		log.Fatalf("Error opening database connection: %s", err)
 	}
 	defer db.Close()
 
 	err = goose.Up(db, "./goose_migrations")
 	if err != nil {
-		log.Fatalf("ошибка миграции %v", err)
+		log.Fatalf("Error opening database migrations: %s", err)
 	}
 }
