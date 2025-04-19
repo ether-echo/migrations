@@ -8,7 +8,6 @@ import (
 
 type Config struct {
 	LogLevel   string `env:"LOG_LEVEL" envDefault:"INFO"`
-	Token      string `env:"TOKEN" envDefault:"7731167021:AAHb5ofDkyroDH0LUYznmRVeIycJCYe0c2M"`
 	DBPassword string `env:"DB_PASSWORD" envDefault:"123"`
 	DBHost     string `env:"DB_HOST" envDefault:"db"`
 	DBPort     string `env:"DB_PORT" envDefault:"5432"`
