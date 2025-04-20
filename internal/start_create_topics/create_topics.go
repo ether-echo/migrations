@@ -31,6 +31,10 @@ func CreateNewTopics(cnf *sarama.Config) {
 			NumPartitions:     1,
 			ReplicationFactor: 1,
 		},
+		"numerology": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
 		"message": {
 			NumPartitions:     1,
 			ReplicationFactor: 1,
