@@ -39,6 +39,18 @@ func CreateNewTopics(cnf *sarama.Config) {
 			NumPartitions:     1,
 			ReplicationFactor: 1,
 		},
+		"admin": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"send_notification": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"get_all_users": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
 	}
 
 	// Создаём каждый топик
