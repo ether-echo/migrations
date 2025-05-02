@@ -6,7 +6,10 @@ CREATE TABLE IF NOT EXISTS users (
     username TEXT,
     subscription BOOLEAN DEFAULT FALSE,
     got_taro BOOLEAN DEFAULT FALSE,
-    got_numerology BOOLEAN DEFAULT FALSE,
+    got_taro_love BOOLEAN DEFAULT FALSE,
+    got_taro_finance BOOLEAN DEFAULT FALSE,
+    got_taro_health BOOLEAN DEFAULT FALSE,
+    got_personal_numerology BOOLEAN DEFAULT FALSE,
     registered_at TIMESTAMP DEFAULT NOW()
 );
 
