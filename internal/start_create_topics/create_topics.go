@@ -28,7 +28,7 @@ func CreateNewTopics(cnf *sarama.Config) {
 			ReplicationFactor: 1,
 		},
 		"taro": {
-			NumPartitions:     1,
+			NumPartitions:     5,
 			ReplicationFactor: 1,
 		},
 		"numerology": {
@@ -48,6 +48,22 @@ func CreateNewTopics(cnf *sarama.Config) {
 			ReplicationFactor: 1,
 		},
 		"get_all_users": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"service_sub": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"personal_num": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"taro_love": {
+			NumPartitions:     1,
+			ReplicationFactor: 1,
+		},
+		"taro_finance": {
 			NumPartitions:     1,
 			ReplicationFactor: 1,
 		},

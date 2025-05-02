@@ -18,7 +18,6 @@ services:
       KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
       KAFKA_HEAP_OPTS: -Xmx256M -Xms128M
-#      KAFKA_CREATE_TOPICS: my-topic:1:1,another-topic:2:1
     networks:
       - infra_net
   db:

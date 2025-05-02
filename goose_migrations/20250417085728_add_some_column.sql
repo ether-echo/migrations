@@ -4,6 +4,7 @@ CREATE TABLE IF NOT EXISTS users (
     first_name TEXT,
     last_name TEXT,
     username TEXT,
+    subscription BOOLEAN DEFAULT FALSE,
     got_taro BOOLEAN DEFAULT FALSE,
     got_numerology BOOLEAN DEFAULT FALSE,
     registered_at TIMESTAMP DEFAULT NOW()
